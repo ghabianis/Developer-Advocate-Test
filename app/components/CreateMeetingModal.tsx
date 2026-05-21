@@ -202,9 +202,9 @@ export default function CreateMeetingModal({ isOpen, onClose, onMeetingCreated }
           {/* Time Inputs */}
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold mb-2">Start Time *</label>
+              <label className="block text-sm font-semibold mb-2" >Start Time *</label>
               <div className="relative">
-                <Calendar className="absolute left-3 top-2.5 w-5 h-5 text-white pointer-events-none" />
+                <Calendar color="#ffffff" className="absolute left-3 top-2.5 w-5 h-5 text-white pointer-events-none"  />
                 <input
                   type="datetime-local"
                   required
@@ -213,7 +213,7 @@ export default function CreateMeetingModal({ isOpen, onClose, onMeetingCreated }
                     setFormData({ ...formData, startTime: e.target.value })
                     if (errors.startTime) setErrors({ ...errors, startTime: '', time: '' })
                   }}
-                  className={`date-time-input w-full pl-10 pr-4 py-2 bg-white/5 border rounded-lg focus:outline-none transition-colors [color-scheme:dark] ${
+                  className={`date-time-input w-full pl-10 pr-4 py-2 bg-white/5 border rounded-lg focus:outline-none transition-colors [color-scheme:white] ${
                     errors.startTime ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-white'
                   }`}
                 />
@@ -238,7 +238,7 @@ export default function CreateMeetingModal({ isOpen, onClose, onMeetingCreated }
                     setFormData({ ...formData, endTime: e.target.value })
                     if (errors.endTime) setErrors({ ...errors, endTime: '', time: '' })
                   }}
-                  className={`date-time-input w-full pl-10 pr-4 py-2 bg-white/5 border rounded-lg focus:outline-none transition-colors [color-scheme:dark] ${
+                  className={`date-time-input w-full pl-10 pr-4 py-2 bg-white/5 border rounded-lg focus:outline-none transition-colors [color-scheme:white] ${
                     errors.endTime ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-white'
                   }`}
                 />
